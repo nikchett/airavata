@@ -350,3 +350,6 @@ org.eclipse.core.runtime.CoreException: Launch configuration NotifySubmissionSer
 2017-10-02 04:38:40,441 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
 2017-10-02 04:38:45,234 [Worker-20] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/nikithachettiar/Documents/IU_Fall17/ScienceGateway/Airavata/Fork/airavata/NotifySubmission/NotifySubmission
 2017-10-02 04:38:45,234 [Worker-20] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2017-10-06 15:15:05,408 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-09 14:39:57,186 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-09 14:43:05,170 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
