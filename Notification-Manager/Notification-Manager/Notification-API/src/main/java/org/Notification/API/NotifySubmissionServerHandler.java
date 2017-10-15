@@ -11,11 +11,8 @@ public class NotifySubmissionServerHandler implements NotifySubmissionService.If
 
 	@Override
 	public String notifySubmission(String requestID) throws TException {
-		(new MailNotification()).sendMail(requestID, (new NotifySubmissionServerHandler()).getAdminId());
+	
 		return "Request processed" + requestID;
 	}
 
-	public String getAdminId() {
-		return "demosga123@gmail.com";
-	}
 }

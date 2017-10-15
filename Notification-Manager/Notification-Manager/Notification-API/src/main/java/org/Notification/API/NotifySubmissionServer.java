@@ -9,6 +9,7 @@ import org.apache.thrift.transport.TServerTransport;
 
 import java.io.IOException;
 
+import org.Notification.Authenticator.NotificationDetail;
 import org.Notification.Sender.MailNotification;
 import org.apache.thrift.TDeserializer;
 import org.apache.thrift.server.TServer;
@@ -49,18 +50,21 @@ public class NotifySubmissionServer {
 		      System.out.println(
 		         " [*] Waiting for messages. To exit press CTRL+C");
 		      System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
+		      
+		      String requestId = "";
 
 		      Consumer consumer = new DefaultConsumer(channel) {
 		        @Override
 		        public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body)
 		            throws IOException {
 		          String message = new String(body, "UTF-8");
+		          (new MailNotification()).sendMail(message, (new NotificationDetail()).getAdminId());
 		          System.out.println(" [x] Received '" + message + "'");
 		        }
 		       
 		      };
 		      channel.basicConsume("notify", true, consumer);
-		      (new MailNotification()).sendMail("1001", (new NotifySubmissionServerHandler()).getAdminId());
+		      
 		       
 		    } catch(Exception e){
 		      //Dump any error to the console

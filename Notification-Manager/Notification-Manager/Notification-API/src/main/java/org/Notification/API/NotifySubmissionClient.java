@@ -58,7 +58,7 @@ public class NotifySubmissionClient {
 		        //Serialize our domain object to a byte array
 		      //  byte[] payload = serializer.serialize("hello");
 		        
-		        String message  = "hello" ;
+		        String message  = "1001" ;
 		        
 		          //Publish message on the queue using our domain
 		          //object as the message (or payload)
