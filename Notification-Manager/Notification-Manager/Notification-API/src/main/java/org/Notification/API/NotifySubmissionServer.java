@@ -5,16 +5,13 @@ import com.rabbitmq.client.*;
 import com.rabbitmq.client.Consumer;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
-import org.apache.thrift.transport.TServerTransport;
+
 
 import java.io.IOException;
 
 import org.Notification.Authenticator.NotificationDetail;
 import org.Notification.Sender.MailNotification;
-import org.apache.thrift.TDeserializer;
-import org.apache.thrift.server.TServer;
-import org.apache.thrift.server.TServer.Args;
-import org.apache.thrift.server.TSimpleServer;
+
 
 public class NotifySubmissionServer {
 	public static void StartsimpleServer() {
