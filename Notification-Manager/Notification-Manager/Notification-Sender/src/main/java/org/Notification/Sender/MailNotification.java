@@ -15,7 +15,7 @@ import javax.mail.internet.MimeMessage;
 public class MailNotification {
 
 	public void sendMail(String requestId, String adminId) {
-
+		// currently sends to only one sender, but will change to send to multiple users
 		final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 		// Get a Properties object
 		Properties props = System.getProperties();

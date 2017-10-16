@@ -40,7 +40,7 @@ public class NotifySubmissionServer {
 		            throws IOException {
 		          String message = new String(body, "UTF-8");
 		          String mail = (new NotificationDetail()).processRequest(message);
-		          System.out.println("888888888mail"+mail);
+		         
 		          (new MailNotification()).sendMail(message, mail);
 		          System.out.println(" [x] Received '" + message + "'");
 		        }

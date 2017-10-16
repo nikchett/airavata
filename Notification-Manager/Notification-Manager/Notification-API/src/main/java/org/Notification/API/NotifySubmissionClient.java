@@ -34,7 +34,7 @@ public class NotifySubmissionClient {
 		        Channel channel = connection.createChannel();
 		        //Create the Queue if it does not exist
 		        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-		
+		        //assuming this is the request id send
 		        String message  = "1001" ;
 		        
 		      
